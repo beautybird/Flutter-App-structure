@@ -1,0 +1,167 @@
+name: flutterapp
+description: "Flutter App "
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #Routing
+  go_router: ^14.2.7
+  #Localization
+  easy_localization: ^3.0.7
+  #Splash page
+  easy_splash_screen: ^1.0.4
+  #Dio
+  #dio: ^5.4.0
+  #dio_smart_retry: ^6.0.0
+  #dart_jsonwebtoken: ^2.9.1
+  http: ^1.2.2
+  #html: ^0.15.4
+  # Map Locations
+  google_maps_flutter: ^2.9.0
+  #google_maps: ^7.1.0
+  #flutter_google_places_sdk: ^0.3.7
+  #location: ^6.0.1
+  #location_web: ^5.0.1
+  map: ^2.0.2
+  google_api_headers: ^4.1.3
+  #google_maps_webservice_ex: ^0.0.1+2
+  #flutter_polyline_points
+  flutter_polyline_points: ^2.1.0
+  #Fonts
+  font_awesome_flutter: ^10.7.0
+  #State management notifier provider
+  provider: ^6.1.2
+  #Form builder
+  #flutter_form_builder: ^9.1.1
+  #form_builder_validators: ^9.1.0
+  #Supabase
+  supabase_flutter: ^2.6.0
+  postgres: ^3.3.0
+  #path
+  path: ^1.9.0
+  #image_picker
+  image_picker: ^1.1.2
+  #image
+  image: ^4.2.0
+  #A flutter library to show images from the internet and keep them in the cache directory.
+  cached_network_image: ^3.3.1
+  # Generic cache manager for flutter. Saves web files on the storages of the device and saves the cache info using sqflite.
+  flutter_cache_manager: ^3.3.1
+  #An easy way to display images in a full-screen dialog, including pinch & zoom.
+  easy_image_viewer: ^1.5.1
+  #A Flutter package which provides 360 view of the images with rotation and gesture customisations.
+  imageview360: ^1.3.0
+  #share app
+  share_plus: ^9.0.0
+  #Text Animation
+  animated_text_kit: ^4.2.2
+  #container animation
+  clay_containers: ^0.3.4
+  #Icons
+  eva_icons_flutter: ^3.1.0
+  carbon_icons: ^0.0.1+2
+  #Rename app icon or bundles
+  rename: ^3.0.2
+  #Dropdown list
+  flutter_dropdown: ^1.0.1+hotfix.1
+  dropdown_button2: ^2.3.9
+  #Video player
+  video_player: ^2.9.1
+  chewie: ^1.8.1
+  #Paypal
+  flutter_paypal_payment: ^1.0.6
+  #responsive layout for different size device_simulator
+  responsive_framework: ^1.4.0
+  flutter_inappwebview: ^5.8.0
+  #Webview
+  webview_flutter: ^4.8.0
+  webview_flutter_wkwebview: ^3.14.0
+  webview_flutter_android: ^3.16.4
+  #Grid View
+  #flutter_staggered_grid_view:  ^0.7.0
+  #URL
+  url_launcher: ^6.3.0
+  #send email
+  flutter_email_sender: ^6.0.3
+  #email_otp: ^2.1.2
+  #pin_code_fields: ^8.0.1
+  #Hash password
+  password_dart: ^2.0.1
+  #flutter_secure_storage: ^9.1.1
+  #launch Whatsapp
+  whatsapp_unilink: ^2.1.0
+  #A simple and customizable flutter package for inputting phone number in intl / international format
+  extended_phone_number_input: ^1.0.2
+  #Contact us
+  contactus: ^1.2.3
+  #Highlight Flutter text at the character-level for simple and customizable search term highlighting.
+  substring_highlight: ^1.0.33
+  #double back
+  double_back_to_close_app: ^2.1.0
+  #shared_preferences
+  shared_preferences: ^2.2.3
+  #Payment & subscription
+  #in_app_purchase: ^3.2.0
+  #Tabs bar
+  buttons_tabbar: ^1.3.13
+  #Lottie Animation
+  #lottie: ^2.7.0
+  #Shimmer
+  #shimmer: ^3.0.0
+  #set of utility libraries for Dart that makes using many Dart libraries easier
+  #quiver: ^3.2.1
+  #for generating sign-in buttons for different social media account.
+  sign_in_button: ^3.2.0
+  #Google Sign in
+  #google_sign_in: ^6.1.4
+  #firebase_auth: ^4.10.0
+  #firebase_core: ^2.16.0
+  #Use this package if you need more customization when notifying your user.
+  another_flushbar: ^1.12.30
+  #Builds indication marks for PageView.
+  #smooth_page_indicator: ^1.1.0
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10+1 # it help us to use SVG in our app
+
+
+  latlng: any
+  path_provider: any
+  in_app_purchase_android: any
+  in_app_purchase_storekit: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: "^0.13.1"
+  lint: ^2.3.0
+  #A mock framework inspired by Mockito with APIs for Fakes, Mocks, behavior verification, and stubbing.
+  #mockito: ^5.0.16
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/tabarakIcon.png"
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
+    - lib/src/lang/
+    - assets/videos/
+    - assets/icons/
