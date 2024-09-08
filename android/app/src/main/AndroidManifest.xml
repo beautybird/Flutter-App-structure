@@ -1,41 +1,93 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="net.deziretechcom.flutterapp">
+    <!-- https://developer.android.com/about/versions/12/behavior-changes-12#security -->
+    <!-- <service android:name="com.example.app.backgroundService"
+                  android:exported="true">
+             <intent-filter>
+                 <action android:name="com.example.app.START_BACKGROUND" />
+             </intent-filter>
+         </service>
+      -->
+    <!-- https://developer.android.com/guide/topics/permissions/overview -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <!-- <uses-permission android:name="android.permission.VIBRATE" /> -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_CALL_LOG" /> -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!--  <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" /> -->
+    <!--  Always include this permission  -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--  Include only if your app benefits from precise location access.  -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--  Required only when requesting background location access on
+          Android 10 (API level 29) and higher.  -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
+    <!-- <uses-permission android:name="com.google.android.gms.permission.AD_ID" /> -->
+    <!-- https://developer.android.com/guide/topics/manifest/uses-feature-element -->
+    <uses-feature android:name="android.gradle.wrapper" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="true"/>
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+    <uses-sdk android:minSdkVersion="31" android:targetSdkVersion="34"/>
+    <!-- https://developer.android.com/training/package-visibility/declaring -->
+    <!-- https://developer.android.com/guide/topics/manifest/queries-element -->
+    <queries>
+        <!-- https://developer.android.com/training/package-visibility/use-cases -->
+        <!--  Place inside the <queries> element.  -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO"/>
+            <data android:scheme="smsto" android:host="*"/>
+        </intent>
+        <package android:name="com.whatsapp"/>
+    </queries>
     <application
         android:label="flutterapp"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:taskAffinity=""
-            android:theme="@style/LaunchTheme"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-            android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize">
-            <!-- Specifies an Android theme to apply to this Activity as soon as
-                 the Android process has started. This theme is visible to the user
-                 while the Flutter UI initializes. After that, this theme continues
-                 to determine the Window background behind the Flutter UI. -->
-            <meta-data
-              android:name="io.flutter.embedding.android.NormalTheme"
-              android:resource="@style/NormalTheme"
-              />
+        android:icon="@mipmap/launcher_icon"
+        tools:replace="android:label"
+        android:enableOnBackInvokedCallback="true"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop" android:theme="@style/LaunchTheme" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:hardwareAccelerated="true" android:windowSoftInputMode="adjustResize">
+            <!--  Specifies an Android theme to apply to this Activity as soon as
+                             the Android process has started. This theme is visible to the user
+                             while the Flutter UI initializes. After that, this theme continues
+                             to determine the Window background behind the Flutter UI.  -->
+            <meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@style/NormalTheme"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <!--  Add this intent-filter for Deep Links  -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!--  Accepts URIs that begin with YOUR_SCHEME://YOUR_HOST  -->
+                <data android:host="login-callback" android:scheme="io.supabase."/> <!-- Add your supabase app name  -->
+                <!-- Add your supabase app name  -->
+            </intent-filter>
         </activity>
-        <!-- Don't delete the meta-data below.
-             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
-        <meta-data
-            android:name="flutterEmbedding"
-            android:value="2" />
+        <!--  Don't delete the meta-data below.
+                     This is used by the Flutter tool to generate GeneratedPluginRegistrant.java  -->
+        <meta-data android:name="flutterEmbedding" android:value="2"/>
     </application>
-    <!-- Required to query activities that can process text, see:
-         https://developer.android.com/training/package-visibility and
-         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+    <!--  Required to query activities that can process text, see:
+             https://developer.android.com/training/package-visibility?hl=en and
+             https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
 
-         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+             In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.  -->
     <queries>
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
