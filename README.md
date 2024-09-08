@@ -1,4 +1,6 @@
 # flutterapp
+
+
 This is full Flutter app code that you can get and customize to your requirements.
 
 In this project I incorporated with Flutter the following:
@@ -10,13 +12,10 @@ In this project I incorporated with Flutter the following:
 2- GoRouter for pages navigation.
 
 
-3- Paypal payment.
+3- Google Map version 2.
 
 
-4- Google Map version 2.
-
-
-5- Provider package.
+4- Provider package.
 
 
 6- Multi Locale .
@@ -25,24 +24,9 @@ In this project I incorporated with Flutter the following:
 And for the back end I used Supabase cloud platform for Postgresql database. You will find all the code for the app and the tables for the database.
 
 
-
     Features :
 
-
-1- Multi items/ sell transaction.
-
-
-2- Different suppliers items can be added at same sell transaction.
-
-
-3- Paypal checkout.
-
-
-4- Shop location with Google Map.
-
-
-5- Any item can be removed from order list before checkout.
-
+Implementing the Parrallax package which will improve the look of your pages images in your app
 
     Installation Instructions :
 
@@ -72,3 +56,7 @@ Change & Adaptation of the code :
 
 
 You will get any update to this app in future at this repository.
+
+You can see the actual look of the design :
+
+shorts :  https://youtube.com/shorts/p68wJIOG0JY?feature=share  
