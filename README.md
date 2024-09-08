@@ -18,7 +18,7 @@ In this project I incorporated with Flutter the following:
 4- Provider package.
 
 
-6- Multi Locale .
+5- Multi Locale .
 
 
 And for the back end I used Supabase cloud platform for Postgresql database. You will find all the code for the app and the tables for the database.
