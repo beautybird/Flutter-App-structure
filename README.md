@@ -1,6 +1,5 @@
 # flutterapp
-
-Flutter App 
+This is full Flutter app code that you can get and customize to your requirements.
 
 In this project I incorporated with Flutter the following:
 
@@ -27,7 +26,7 @@ And for the back end I used Supabase cloud platform for Postgresql database. You
 
 
 
-Features :
+    Features :
 
 
 1- Multi items/ sell transaction.
@@ -45,7 +44,7 @@ Features :
 5- Any item can be removed from order list before checkout.
 
 
-Installation Instructions :
+    Installation Instructions :
 
 
 You need and IDE like Intellij , vscode or Android studio,
@@ -57,7 +56,7 @@ install the Flutter SDK and with it comes Dart language SDK.
 Change & Adaptation of the code :
 
 
-IMPORTANT: You need to change things in the code like :
+    IMPORTANT: You need to change things in the code like :
 
 
 1- Your package name in the manifest and app name also in the build/gradle file.
@@ -73,15 +72,3 @@ IMPORTANT: You need to change things in the code like :
 
 
 You will get any update to this app in future at this repository.
-
-Features :
-
-1- Multi items/ sell transaction.
-
-2- Different suppliers items can be added at same sell transaction.
-
-3- Paypal checkout.
-
-4- Shop location with Google Map.
-
-5- Any item can be removed from order list before checkout.
