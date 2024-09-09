@@ -2,19 +2,20 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/src/gorouter/routing_conf/nestedNAvigator.dart';
 import 'package:flutterapp/src/parallax/cards.dart';
+import 'package:flutterapp/src/routes/contactus.dart';
+import 'package:flutterapp/src/routes/forgot_password.dart';
 import 'package:flutterapp/src/routes/home_page.dart';
+import 'package:flutterapp/src/routes/login.dart';
+import 'package:flutterapp/src/routes/loginForm.dart';
+import 'package:flutterapp/src/routes/noproducts_page.dart';
+import 'package:flutterapp/src/routes/profileForm.dart';
+import 'package:flutterapp/src/routes/shareapp.dart';
+import 'package:flutterapp/src/routes/signup_page.dart';
+import 'package:flutterapp/src/routes/splash.dart';
 import 'package:flutterapp/src/settings/settings_view.dart';
-import 'package:flutterapp/src/with_supabase/routes_supabase/profileForm.dart';
-import 'package:flutterapp/src/with_supabase/routes_supabase/splash.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../with_supabase/routes_supabase/contactus.dart';
-import '../../with_supabase/routes_supabase/forgot_password.dart';
-import '../../with_supabase/routes_supabase/login.dart';
-import '../../with_supabase/routes_supabase/loginForm.dart';
-import '../../with_supabase/routes_supabase/noproducts_page.dart';
-import '../../with_supabase/routes_supabase/shareapp.dart';
-import '../../with_supabase/routes_supabase/signup_page.dart';
+
 
 // ignore: depend_on_referenced_packages
 

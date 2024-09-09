@@ -36,7 +36,7 @@ class _StreetLocationSearchFieldState extends State<StreetLocationSearchField> {
   List<PlaceSearch>? placesSearchResults;
 
   // This used for the google map
-  String kGoogleApiKey = 'AIzaSyCMdp28umIzBZM1odhV2NCnr9-KvVnH7xo';
+  String kGoogleApiKey = ''; // Add Google API key here
 
   ///provider to save the coordinates of the location
   CompanyLocationProvider? companyLocationProvider;
